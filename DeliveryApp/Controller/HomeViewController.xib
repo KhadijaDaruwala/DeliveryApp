@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="DeliveryApp" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonPhoto" destination="Yyg-Cb-Aoo" id="rTl-Yy-Svz"/>
+                <outlet property="buttonSignature" destination="ktI-UX-Q4a" id="UIg-Fq-HEa"/>
+                <outlet property="mapView" destination="QQj-FT-lLg" id="WXG-lX-Muy"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QQj-FT-lLg">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                </mapView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6uM-uc-67W">
+                    <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktI-UX-Q4a" customClass="SubmitButton" customModule="DeliveryApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
+                            <state key="normal" title="eSignature"/>
+                            <connections>
+                                <action selector="buttonSignatureClicked:" destination="-1" eventType="touchUpInside" id="DzB-GM-yx4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yyg-Cb-Aoo" customClass="SubmitButton" customModule="DeliveryApp" customModuleProvider="target">
+                            <rect key="frame" x="187.5" y="0.0" width="187.5" height="50"/>
+                            <state key="normal" title="Photo"/>
+                            <connections>
+                                <action selector="buttonPhotoClicked:" destination="-1" eventType="touchUpInside" id="lQq-6M-kJv"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="TFA-mW-phe"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="6uM-uc-67W" firstAttribute="top" secondItem="QQj-FT-lLg" secondAttribute="bottom" id="3Xj-Wp-9Qx"/>
+                <constraint firstItem="QQj-FT-lLg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="MEY-Ep-7rc"/>
+                <constraint firstItem="6uM-uc-67W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q1Z-0x-SMJ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6uM-uc-67W" secondAttribute="trailing" id="T9Z-Vm-VRp"/>
+                <constraint firstItem="QQj-FT-lLg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cZI-Aw-iYm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QQj-FT-lLg" secondAttribute="trailing" id="gcN-Vb-HwR"/>
+                <constraint firstItem="6uM-uc-67W" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="nZI-Yy-MZY"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="130"/>
+        </view>
+    </objects>
+</document>

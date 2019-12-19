@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignatureViewController" customModule="DeliveryApp" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonClear" destination="AxH-W4-zyx" id="PAc-uq-rDw"/>
+                <outlet property="buttonSave" destination="xmc-6t-6Bq" id="aF8-ME-UB0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewSignature" destination="5MZ-Nx-QBj" id="GaH-ox-NKo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5MZ-Nx-QBj" customClass="DrawSignatureView" customModule="DeliveryApp" customModuleProvider="target">
+                    <rect key="frame" x="20" y="248" width="374" height="400"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="vd9-vP-35c"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="signatureBackgroundColor">
+                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="strokeColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ILP-GV-ncf">
+                    <rect key="frame" x="20" y="648" width="374" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AxH-W4-zyx" customClass="SubmitButton" customModule="DeliveryApp" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="184.5" height="40"/>
+                            <state key="normal" title="Clear"/>
+                            <connections>
+                                <action selector="buttonClearClicked:" destination="-1" eventType="touchUpInside" id="p3l-90-RdW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xmc-6t-6Bq" customClass="SubmitButton" customModule="DeliveryApp" customModuleProvider="target">
+                            <rect key="frame" x="189.5" y="0.0" width="184.5" height="40"/>
+                            <state key="normal" title="Save"/>
+                            <connections>
+                                <action selector="buttonSaveClicked:" destination="-1" eventType="touchUpInside" id="T9N-KB-ZzT"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="eDj-LC-rD1"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ILP-GV-ncf" firstAttribute="top" secondItem="5MZ-Nx-QBj" secondAttribute="bottom" id="8QV-99-Ohg"/>
+                <constraint firstItem="5MZ-Nx-QBj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="PAj-hN-7Ol"/>
+                <constraint firstItem="5MZ-Nx-QBj" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Tt6-MR-BgW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ILP-GV-ncf" secondAttribute="trailing" constant="20" id="Y2o-Ie-U5T"/>
+                <constraint firstItem="ILP-GV-ncf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dA9-tu-x3X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5MZ-Nx-QBj" secondAttribute="trailing" constant="20" id="r2H-Qf-fxC"/>
+                <constraint firstItem="5MZ-Nx-QBj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="zT8-6F-52l"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140.57971014492756" y="129.91071428571428"/>
+        </view>
+    </objects>
+</document>
